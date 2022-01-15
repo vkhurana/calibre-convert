@@ -47,7 +47,6 @@ jobs:
 
       # https://github.com/marketplace/actions/build-and-push-docker-images
 
-      # .NET Core 3.1
       - name: 'Build and Push calibre-convert'
         uses: docker/build-push-action@v2
         with:
