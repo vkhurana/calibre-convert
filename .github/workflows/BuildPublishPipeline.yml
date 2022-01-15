@@ -15,9 +15,9 @@ on:
   pull_request:
     branches:
       - main
-  schedule:
-    # https://crontab.guru/
-    - cron: '0 2 * * MON'
+  # schedule:
+  #   # https://crontab.guru/
+  #   - cron: '0 2 * * MON'
 
 jobs:
   build:
