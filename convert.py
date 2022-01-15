@@ -21,7 +21,7 @@ class Watcher:
                 time.sleep(1)
         except:
             self.observer.stop()
-            print("Error starting watcher. Does the folder exist?")
+            print("Exit")
 
         self.observer.join()
 
