@@ -28,8 +28,5 @@ COPY convert.py ./
 RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir -r requirements.txt
 
-# Copy the wathcer program into the container
-COPY convert.py /convert.py
-
 # Run the script when the image is run
 ENTRYPOINT ["python3", "/calibre-convert/convert.py"]
