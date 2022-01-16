@@ -28,5 +28,5 @@ COPY convert.py ./
 RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir -r requirements.txt
 
-# Run the script when the image is run
-ENTRYPOINT ["python3", "/calibre-convert/convert.py"]
+# Run the script when the image is run (-u = unbuffer the output)
+ENTRYPOINT ["python3","-u", "/calibre-convert/convert.py"]
