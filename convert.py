@@ -9,12 +9,12 @@ from pyinotify import WatchManager, Notifier, ProcessEvent, EventsCodes
 def Monitor(path):
     class PClose(ProcessEvent):
         temp_folder = "temp"
-        def process_IN_CLOSE(self, event):
+        def process_IN_CLOSE_NOWRITE(self, event):
             src_folder = event.path
             dest_folder = os.path.join(src_folder, self.temp_folder)
             src_file = event.name and os.path.join(event.path, event.name) or event.path
             dest_file_temp = os.path.join(dest_folder, event.name + ".mobi")
-            print ("IN_CLOSE_WRITE event: " + src_file)
+            print ("IN_CLOSE_NOWRITE event: " + src_file)
             print ("src_folder: " + src_folder)
             print ("dest_folder: " + dest_folder)
             print ("src_file: " + src_file)
