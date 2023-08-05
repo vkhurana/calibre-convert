@@ -19,6 +19,9 @@ def Monitor(path):
             print ("dest_folder: " + dest_folder)
             print ("src_file: " + src_file)
             print ("dest_file_temp: " + dest_file_temp)
+            print ("event.name: " + event.name)
+            print ("event.path: " + event.path)
+            print ("event.pathname: " + event.pathname)
 
             if not exists(dest_folder):
                 print("creating temp folder: " + dest_folder)
@@ -46,7 +49,7 @@ def Monitor(path):
 
     wm = WatchManager()
     notifier = Notifier(wm, PClose())
-    wm.add_watch(path, pyinotify.IN_CLOSE_WRITE)
+    wm.add_watch(path, pyinotify.ALL_EVENTS)
 
     try:
         while 1:
