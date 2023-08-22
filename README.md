@@ -12,8 +12,7 @@ This is a docker image on Ubuntu with Python and Calibre, and uses `watchdog` to
 
 [Code and Pipline is on GitHub](https://github.com/vkhurana/calibre-convert):  
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/vkhurana/calibre-convert?logo=github)  
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vkhurana/calibre-convert/Build%20and%20Publish%20Docker%20Images?logo=github)
-
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/vkhurana/calibre-convert/.github/workflows/BuildPublishPipeline.yml?logo=docker)
 ## Container Images
 
 Docker container images are published on [Docker Hub](https://hub.docker.com/r/vkhurana/calibre-convert).  
